@@ -54,6 +54,11 @@
   padding: 20px;
 }
 
+.demo-data {
+  font-size : 20px;
+  space : 10px;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
