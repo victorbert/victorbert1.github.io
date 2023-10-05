@@ -1,24 +1,13 @@
 function Navbar (props) {
     console.log ("props => ", props.test)
     return (
-        <div>
-            <ul>
-                <li>
-                    <a href='#'>Home</a>
-                </li>
-                <li>
-                    <a href='#'>Home</a>
-                </li>
-                <li>
-                    <a href='#'>Home</a>
-                </li>
-                <li>
-                    <a href='#'>Home</a>
-                </li>
-                <li>
-                    (<a href='#'>){props.test}(</a>)
-                </li>
-                </ul>
+        <div className="Navbar-news">
+            <div className="a-href">
+        <a href="#">Home</a>
+          <a href="#">Politik</a>
+          <a href="#">Olaraga</a>
+          <a href="#">Ekonomi</a>
+          </div>
         </div>
     )
 }
