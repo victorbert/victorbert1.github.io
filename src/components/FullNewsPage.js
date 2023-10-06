@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import FetchData from './FetchData';
 
 function FullNewsPage() {
   const [news, setNews] = useState({});
@@ -9,15 +10,19 @@ function FullNewsPage() {
   useEffect(() => {
     async function fetchNews() {
       try {
-        const response = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`);
-        const jsonData = await response.json();
-        setNews(jsonData);
-        setLoading(false);
+        if (id !== undefined) {
+          const response = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`);
+          const jsonData = await response.json();
+          setNews(jsonData);
+          setLoading(false);
+        } else {
+          console.error('ID is undefined');
+        }
       } catch (error) {
         console.error('Error fetching news:', error);
       }
     }
-
+  
     fetchNews();
   }, [id]);
 
@@ -29,6 +34,7 @@ function FullNewsPage() {
         <>
           <h2 className="news-title">{news.title}</h2>
           <p className="news-body">{news.body}</p>
+          <FetchData />
         </>
       )}
     </div>
