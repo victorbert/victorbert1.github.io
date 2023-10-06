@@ -108,6 +108,31 @@
   padding : 10px;
   border-radius : 9px;
 }
+.full-news-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+  position: absolute;
+  background-color : #F5F5F5 ;
+  width : 1000px;
+  padding: 20px;
+  border-radius : 9px;
+  shadow : 0 2px 3px;
+}
+.news-h1 {
+  color : white;
+}
+.full-news{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+  position: relatif;
+  width : 1000px;
+  padding: 20px;
+ 
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

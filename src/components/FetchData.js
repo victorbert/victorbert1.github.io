@@ -20,16 +20,16 @@ function FetchData() {
 
   return (
     <div className="news-container">
-    <h3>Today News</h3>
-    {data.map(item => (
-      <div key={item.id} className="news-item">
-        <h2 className="news-title">
-        <Link to={`/news/${item.id}`}>{item.title}</Link>
-        </h2>
-      </div>
-    ))}
-  </div>
-  
+  {data.map(item => (
+    <div key={item.id} className="news-item">
+      <h2 className="news-title">
+      <Link to={`/news/${item.id}`}>Baca Berita</Link>
+      </h2>
+      <p className="news-body">{item.body}</p>
+    </div>
+  ))}
+</div>
+
   );
 }
 

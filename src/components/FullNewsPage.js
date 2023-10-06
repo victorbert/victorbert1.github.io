@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
-function NewsDetail() {
+function FullNewsPage() {
   const [news, setNews] = useState({});
   const { id } = useParams();
   const [loading, setLoading] = useState(true);
-
 
   useEffect(() => {
     async function fetchNews() {
@@ -23,17 +22,18 @@ function NewsDetail() {
   }, [id]);
 
   return (
-    <div className="news-detail">
-    {loading ? (
-      <p>Loading...</p>
-    ) : (
-      <>
-        <h2 className="news-title">{news.title}</h2>
-        <p className="news-body">{news.body}</p>
-      </>
-    )}
-  </div>
-);
-    }
+    <div className="full-news-page">
+      {loading ? (
+        <p>Loading...</p>
+      ) : (
+        <>
+          <h2 className="news-title">{news.title}</h2>
+          <p className="news-body">{news.body}</p>
+        </>
+      )}
+    </div>
+  );
+}
 
-export default NewsDetail;
+export default FullNewsPage;
+
