@@ -12,13 +12,14 @@ const App = () => {
       <h1 className='h1-h'>News.id </h1>
       <input className='input-p' type='text' placeholder='Telusuri Topik'></input>
       <FetchData />
-      <FullNewsPage />
       <Timer />
+
 
       <Routes>
         <Route path="/" element={<FetchData />} />
         <Route path="/news/:id" element={<FullNewsPage />} />
       </Routes>
+
 
     </div>
   );
